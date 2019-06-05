@@ -26,9 +26,9 @@ public class InsertionSort{
    */ 
   private static int[] insertionSort(int[] arr){
     for(int j = 1; j < arr.length; j++){
-      int key = arr[j];
+      int key = arr[j];//the value to be inserted
       int i = j - 1;
-      while(i >= 0){//loop through the sorted subarray arr[0,...,j-1] to find the proper positon where the arr[j] can be inserted, such that arr[0,...,j] is in order.
+      while(i >= 0){//loop through the sorted subarray arr[0,...,j-1] to find the proper positon where the arr[j] can be inserted, such that arr[0,...,j] is in sorted order.
         if(arr[i] > key){
           i--;
         }
@@ -38,18 +38,18 @@ public class InsertionSort{
       }
       int startInd = i + 1;
       int endInd = j - 1;
-      arr = shiftRightOneBit(arr, startInd, endInd);//in order to insert the element arr[j] to the positon with index of startInd, the subarray arr[startInd,...,j-1] should be shifted one position to the right. 
+      arr = shiftRightOneBit(arr, startInd, endInd);//in order to insert a new element, each element after the insertion location should be shifted one bit to the right.
       arr[startInd] = key;
     }
     return arr;
   }
 
   /**
-   * This methods shifts elements from index startInd to the endInd of the array arr to the righ one positon.
-   * @param arr, the original array whose subarray is shifted
-   * @param startInd, the index of the first element to be shifted
-   * @param endInd the index of the last element to be shifted 
-   * @return int[] the array whose elements have been partly shifted 
+   * This methods shifts elements one bit to the right, and the index range of the elements is specified.
+   * @param arr the original array. A subarray whithin it will be shifted.
+   * @param startInd, the index of the first element of the subarray.
+   * @param endInd the index of the last element of the subarray. 
+   * @return int[] the new array after shift operation
    */
   private static int[] shiftRightOneBit(int[] arr, int startInd, int endInd){
     for(int i = endInd; i >= startInd; i--){

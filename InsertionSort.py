@@ -7,7 +7,7 @@ Thomas H. Cormen etc., Introduction to Algortithms, Third Editi    on, 2009, p.1
 
 def insertSort(arr):
     for j in range(1, len(arr)):
-        key = arr[j]
+        key = arr[j]#the element to be inserted if it is smaller than any element in front of it.
         i = j - 1
         while i >= 0:
             if arr[i] > key:
