@@ -1,3 +1,8 @@
 # Introduction to Algorithms
 ## I Foundations
-* Insertion sort
+1. Insertion sort
+  * InsertionSort.java
+  * InsertionSoet.py
+2. Merge sort
+  * MergeSort.java
+  * MergeSort.py

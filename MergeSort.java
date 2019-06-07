@@ -1,5 +1,5 @@
 /**
- * Merge sort
+ * Merge sort with the rate of growth of running time Θ(nlgn)
  * Thomas H. Cormen etc., Introduction to Algortithms, Third Edition, 2009, p.31-34
  * @author X. Bao
  * @version June 6, 2019

@@ -1,5 +1,5 @@
 /**
- * insertion sort
+ * insertion sort with rate of growth of running time Θ(n²)
  * Thomas H. Cormen etc., Introduction to Algortithms, Third Edition, 2009, p.19
  * @author X. Bao
  * @version June 3, 2019
